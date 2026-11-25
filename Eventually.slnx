@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StandSure.Eventually/StandSure.Eventually.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/StandSure.Eventually.Tests/StandSure.Eventually.Tests.csproj" />
+  </Folder>
+</Solution>
