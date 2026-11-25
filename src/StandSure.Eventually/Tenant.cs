@@ -18,5 +18,5 @@ public readonly record struct Tenant
     public Option<string> Id { get; }
 
     /// <summary>A tenant with the given id. An empty id fails when the event is created.</summary>
-    public static Tenant Of(string id) => default; // not yet implemented
+    public static Tenant Of(string id) => new(Option.Some(id));
 }
