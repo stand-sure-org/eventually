@@ -1,0 +1,10 @@
+bin/
+obj/
+TestResults/
+*.user
+.vs/
+.idea/
+BenchmarkDotNet.Artifacts/
+*.received.txt
+artifacts/
+.DS_Store

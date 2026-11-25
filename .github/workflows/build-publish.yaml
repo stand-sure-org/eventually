@@ -1,0 +1,25 @@
+name: build-publish
+on:
+  push:
+    branches: [ "main" ]
+    tags: [ "*" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: stand-sure-org/Oui-DELIVER/.github/workflows/build-publish.yml@main
+    secrets:
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      attestations: write
+      packages: write
+      pull-requests: write
+      id-token: write
+      contents: write
+      actions: read
+      checks: write
+    with:
+      nugetPackagesPath: ./artifacts/packages
+      testArguments: --report-xunit-trx
